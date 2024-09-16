@@ -49,6 +49,19 @@
     </div>
     
    
+   
+   <div class="col-md-4">
+       <div class="card point-card">
+       <div class ="card-body text-center text-success">
+       <i class="fas fa-user-md fa-3x"></i>
+        </br>
+         <p class="fs-4 text-center"> View_Doctor<br>5
+       </p>
+      </div>
+     </div>
+    </div>
+       
+       
           
       
       <div class="col-md-4"> 

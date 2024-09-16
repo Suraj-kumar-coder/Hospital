@@ -91,7 +91,7 @@
                    <div class="col-md-6 mt-2">
                  <div class="card point-card">
                    <div class="card-body">
-                      <p class="fs-5">Friendly Doctor</p>
+                      <p class="fs-5">Experience Doctor</p>
                       <p>Loreum ipsum dolar sit amet, consectetur adipsicing elit
                      Volputatem, inventore</p>
                </div>

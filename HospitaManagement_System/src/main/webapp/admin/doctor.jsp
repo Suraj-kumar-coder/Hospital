@@ -108,6 +108,15 @@ width:430px;
        <div class="card point-card"> 
          <div class="card-body">
             <p class="fs-3 text-center"> Doctor Details</p>
+            <c:if test ="${not empty errorMsgdel }">
+        <p class ="fs-3 text-center text-danger">${errorMsgdel}</p>
+        <c:remove var= "errorMsgdel" scope ="session" />
+     </c:if>
+     
+     <c:if test ="${not empty succMsgdel }">
+        <p class ="fs-3 text-center text-danger">${succMsgdel}</p>
+        <c:remove var= "succMsgdel" scope ="session" />
+     </c:if>
             <table class ="table">
             <thead>
                <tr>
@@ -135,19 +144,15 @@ width:430px;
     			<td><%= d.getSpecialist() %></td>
     			<td><%= d.getEmail() %></td>
     			<td><%= d.getMobno() %></td>
-    			<td><a href="#" class="btn btn-sm btn-primary">Edit</a>
+    			<td><a href="edit_doctor.jsp?id=<%=d.getId() %>" class="btn btn-sm btn-primary">Edit</a>
     			
-    			<a href="#" class ="btn btn-sm btn-danger">Delete</a>
+    			<a href="../deleteDoctor?id=<%=d.getId() %>" class ="btn btn-sm btn-danger">Delete</a>
     			</td>
     			</tr>
     		<%}
     		
     		%>
-    
-            
-           
-            
-            
+   
             
             
             </tbody>

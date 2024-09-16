@@ -59,7 +59,7 @@ color:red
       
       
       </form>
-      <br> Don't have an account? <a href="signup.jsp" class="clink">create one</a>
+      <br> Don't have an account? <a href="signup.jsp" class="clink">create new one</a>
      </div>
     </div>
    </div>

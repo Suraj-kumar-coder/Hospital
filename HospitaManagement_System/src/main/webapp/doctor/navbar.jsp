@@ -15,20 +15,22 @@
         
         
         <li class="nav-item"> <a class="nav-link active" aria-current="page" href="home.jsp">HOME</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="doctor.jsp">DOCTOR</a></li>
+<!--       <li class="nav-item"><a class="nav-link active" aria-current="page" href="doctor.jsp">DOCTOR</a></li>
         <li class="nav-item"><a class="nav-link active" aria-current="page" href="view_doctor.jsp">VIEW_DOCTOR</a></li>
+  -->
         <li class="nav-item"><a class="nav-link active" aria-current="page" href="patient.jsp">PATIENT</a></li>
-        
       </ul>
     
           
           <form class="d-flex">
            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Admin
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                	<i class="fa-solid fa-user"></i> ${doctObj.fullname}
               
                 </button>
                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="../adminLogout" name="Logout">Logout</a></li>
+                       	  <li><a class="dropdown-item" href="../adminLogout" name="Logout">Edit Profile</a></li>
+                          <li><a class="dropdown-item" href="../UserLogout" name="Logout">Logout</a></li>
                             
                    </ul>
           </div>

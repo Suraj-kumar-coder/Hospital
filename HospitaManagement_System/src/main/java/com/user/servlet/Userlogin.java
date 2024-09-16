@@ -9,8 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.dao.DoctorDao;
 import com.dao.UserDao;
 import com.db.DBConnect;
+import com.entity.Doctor;
 import com.entity.User;
 
 @WebServlet("/Login")
@@ -25,13 +27,13 @@ public class Userlogin extends HttpServlet{
 				HttpSession session= req.getSession();
 				UserDao dao = new UserDao(DBConnect.getConn());
 				User user = dao.Userlogin(email,password);
+				DoctorDao dao2 = new DoctorDao(DBConnect.getConn());
+				Doctor d = dao2.login(email, password);
 				String msg= null;
 				
 				if(user != null)
 				{
 					session.setAttribute("userObj", user);
-					
-					
 					resp.sendRedirect("index.jsp");
 				}
 				else if("admin@gmail.com".equals(email) && "admin".equals(password))
@@ -40,9 +42,16 @@ public class Userlogin extends HttpServlet{
 					
 					resp.sendRedirect("admin/index.jsp");
 				}
+				
+				else if( d != null)
+				{
+					session.setAttribute("doctObj",d);
+					resp.sendRedirect("doctor/index.jsp");
+				}
+				
 				else
 				{
-					msg = "invalid email &password";
+					msg = "ooho! invalid email & password";
 					
 					req.setAttribute("msg", msg);
 					req.getRequestDispatcher("user_login.jsp").forward(req, resp);

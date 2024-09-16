@@ -20,6 +20,6 @@ public class AdminLogout extends HttpServlet {
 		
 		session.removeAttribute("adminObj");
 //		session.setAttribute("msg", "Admin logout succesfully");
-		resp.sendRedirect("admin_login.jsp");
+		resp.sendRedirect("user_login.jsp");
 }
 }
